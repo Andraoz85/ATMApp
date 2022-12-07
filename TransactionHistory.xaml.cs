@@ -20,6 +20,7 @@ namespace ATMApp
     public partial class TransactionHistory : Window
     {
         Customer _customer { get; set; }
+
         public void SetCustomer(Customer customer)
         {
             _customer = customer;
@@ -47,8 +48,12 @@ namespace ATMApp
                 }
             }
             allTransactions.ItemsSource = userTransactionList;
-
-            
+        }
+        private void Return_Click(object sender, RoutedEventArgs e)
+        {
+            var Inloggad = new Inloggad(_customer);
+            Inloggad.Show();
+            Close();
         }
     }
 }

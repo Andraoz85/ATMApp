@@ -18,7 +18,6 @@ namespace ATMApp
             _customer = customer;
             InitializeComponent();
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
-            //this._customer = customer;
         }
 
         private void Deposit_Click(object sender, RoutedEventArgs e)
@@ -43,14 +42,12 @@ namespace ATMApp
             var MainWindow = new MainWindow();
             this.Close();
             MainWindow.Show();
-
         }        
         private void TransactionHistory_Click(object sender, RoutedEventArgs e)
         {
             var TransactionHistory = new TransactionHistory(_customer);
             this.Close();
             TransactionHistory.Show();
-
         }
     }
 }

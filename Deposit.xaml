@@ -16,6 +16,7 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <TextBlock Text="Sätt in önskat belopp" Grid.ColumnSpan="3" 
                    FontSize="40" FontWeight="Bold" HorizontalAlignment="Center"
@@ -24,19 +25,27 @@
                    FontSize="20" HorizontalAlignment="Right"
                    Margin="10 40 20 10"/>
 
-        <TextBlock Text="Saldo:" Grid.Row="2"
+        <TextBlock Text="Mottagare:" Grid.Row="2"
                    FontSize="20" HorizontalAlignment="Right"
                    Margin="10 40 20 10"/>
+
+        <TextBlock Text="Saldo:" Grid.Row="3"
+                   FontSize="20" HorizontalAlignment="Right"
+                   Margin="10 40 20 10"/>
+
         <TextBox x:Name="DepositAmount" Grid.Column="1" Grid.Row="1" Margin="10 30 10 50" 
                   TextAlignment="Left" FontSize="30" />
 
-        <TextBox x:Name="AccountBalance" Grid.Column="1" Grid.Row="2" Margin="10 30 10 50"
+        <TextBox x:Name="AccountReciever" Grid.Column="1" Grid.Row="2" Margin="10 30 10 50" 
+                  TextAlignment="Left" FontSize="30" />
+
+        <TextBox x:Name="AccountBalance" Grid.Column="1" Grid.Row="3" Margin="10 30 10 50"
                  TextAlignment="Left" FontSize="30" />
 
         <Button x:Name="ConfirmDepositBtn" Content="OK" Grid.Column="2" Grid.Row="1" 
                 Margin="70 35 100 55" FontSize="30" Click="ConfirmDepositBtn_Click" />
 
-        <Button x:Name="Return" Click="Return_Click" Grid.Column="2" Grid.Row="2"
+        <Button x:Name="Return" Click="Return_Click" Grid.Column="2" Grid.Row="3"
                 Height="50" Width="60" >
             <Image Source="Resources/return.jpg"/>
         </Button>

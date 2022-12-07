@@ -22,42 +22,12 @@ namespace ATMApp
             return customer;
         }
         public int GetAccountNr() { return accountNr; }
-        public string? GetName() { return name; }
+        public string? GetName() => name;
         public int GetPinCode() { return pinCode; }
         public double GetBalance() { return balance; }
         public void SetBalance(double balance)
         {
             this.balance = balance;
         }
-
-
-
-
-        /*public Customer(string name, int accountNr, int pinCode, decimal balance)
-        {
-            this.Name = name;
-            this.PinCode = pinCode;
-            this.AccountNr = accountNr;
-            this.Balance = balance;
-        }*/
-        /*
-        public int GetAccountNr()
-        {
-            return accountNr;
-        }
-        public int GetPinCode()
-        {
-            return pinCode;
-        }
-        public string GetName()
-        {
-            return name;
-        }
-        public decimal GetBalance()
-        {
-            return balance;
-        }
-        */
-
     }
 }

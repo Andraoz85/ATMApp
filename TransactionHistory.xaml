@@ -38,13 +38,11 @@
 
             </ListView.View>
         </ListView>
-        <!--
-        <Button x:Name="Return" Click="Return_Click" Grid.Column="2" Grid.Row="2"
+
+        <Button x:Name="Return" Click="Return_Click" Grid.Column="2" Grid.Row="0"
                 Height="50" Width="60" >
             <Image Source="Resources/return.jpg"/>
         </Button>
-        <Image Grid.Column="2"  Grid.Row ="1"  Source="/Resources/bank.png" Stretch="Fill"/>
-        -->
 
     </Grid>
 </Window>

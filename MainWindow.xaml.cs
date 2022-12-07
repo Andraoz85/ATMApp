@@ -30,7 +30,6 @@ namespace ATMApp
                     Hide();
                     return;
                 }
-
             }
             MessageBox.Show("Wrong accountnumber or password. Please try again!");
             userInputPincodeNumber.Clear();
