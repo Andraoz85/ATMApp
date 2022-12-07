@@ -19,19 +19,21 @@ namespace ATMApp
     /// </summary>
     public partial class TransactionHistory : Window
     {
-        Customer _customer;
+        Customer _customer { get; set; }
         public void SetCustomer(Customer customer)
         {
             _customer = customer;
         }
         public List<Transaction> TransactionList { get; set; }
-        public TransactionHistory()
+        public List<Transaction> userTransactionList { get; set; }
+        public TransactionHistory(Customer customer)
         {
+            _customer = customer;
             InitializeComponent();
 
             TransactionList = new List<Transaction>();
+            userTransactionList = new List<Transaction>();
 
-            Customer customer = new Customer();
             Transaction newTransaction = new Transaction(1, 100, true, new DateTime(), 999, 888);
             Transaction newTransaction2 = new Transaction(1, 1000, true, new DateTime(), 888, 999);
             TransactionList.Add(newTransaction);
@@ -41,9 +43,10 @@ namespace ATMApp
             {
                 if (transaction.accountReciever == customer.GetAccountNr())
                 {
-                    allTransactions.ItemsSource = TransactionList;
+                    userTransactionList.Add(transaction);
                 }
             }
+            allTransactions.ItemsSource = userTransactionList;
 
             
         }

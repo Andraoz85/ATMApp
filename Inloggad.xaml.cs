@@ -47,7 +47,7 @@ namespace ATMApp
         }        
         private void TransactionHistory_Click(object sender, RoutedEventArgs e)
         {
-            var TransactionHistory = new TransactionHistory();
+            var TransactionHistory = new TransactionHistory(_customer);
             this.Close();
             TransactionHistory.Show();
 
